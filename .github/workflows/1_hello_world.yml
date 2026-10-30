@@ -20,7 +20,10 @@ jobs:
       
    - name: step-2
      run: touch read.md
-      
+   
+   - name: step-3
+     run: echo "hey there this is git from actions" >read.md
+   
    - name: Push file to same repository
      run: |
           git config user.name "github-actions[bot]"
