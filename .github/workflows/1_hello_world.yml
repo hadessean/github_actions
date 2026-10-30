@@ -1,14 +1,21 @@
-name: hello-world
-# triggers
+name: hello-wroldtest
 on: 
-  push:
-  workflow_dispatch:
-jobs: # stages
-  my-job: # stage
-    runs-on: ubuntu-latest # agent, ubuntu-latest is github hosted runner
-    steps:
-      - name: step-1
-        run: echo "Hello World!"
-
-      - name: step-2
-        run: echo "I am learning Github Actions"
+ push:
+ workflow_dispatch: 
+jobs:
+  showjob:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Checkout repository
+     uses: actions/checkout@v4
+    - name: step-1
+      run: echo "helloe world"      
+    - name: step-2
+      run: touch read.md
+    - name: Push file to same repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add read.md
+          git commit -m "Add read.md"
+          git push     
