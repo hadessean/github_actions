@@ -7,19 +7,14 @@ jobs:
     hello-world:
      runs-on: ubuntu:latest
      steps:
-     -
-      uses: actions/checkout@v3
-     - 
-       name: sayinghellowworld
+     - uses: actions/checkout@v3
+     - name: sayinghellowworld
        run: echo "hello, world" 
-     - 
-       name: sayinghellowworld2
+     - name: sayinghellowworld2
        run: echo "hello, world2"
-     - 
-       name: sayinghellowworld3
+     - name: sayinghellowworld3
        run: echo "hello, world3"
-     - 
-       name: sayinghellowworld4
+     - name: sayinghellowworld4
        run: echo "hello, world4"
       
 
