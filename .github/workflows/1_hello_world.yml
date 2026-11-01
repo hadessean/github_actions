@@ -1,33 +1,12 @@
-name: hello-world-test
-
+name: ci
 on:
-  push:
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
+     push:
+      branches: ["main"]
 jobs:
-  showjob:
-   runs-on: ubuntu-latest
-   
-   steps:
-   - name: Checkout repository
-     uses: actions/checkout@v4
-     
-   - name: step-1
-     run: echo "helloe world"  
+    build:
+     runs-on: ubuntu:latest
+     steps:
+     - uses: actions/checkout@v4
+     - name: sayinghellowworld
+       run: echo "hello, world" 
       
-   - name: step-2
-     run: touch read.md
-   
-   - name: step-3
-     run: echo "hey there this is git from actions" >read.md
-   
-   - name: Push file to same repository
-     run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add read.md
-          git commit -m "Add read.md"
-          git push     
