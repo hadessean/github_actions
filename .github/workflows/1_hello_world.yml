@@ -7,7 +7,19 @@ jobs:
     build:
      runs-on: ubuntu:latest
      steps:
-     - uses: actions/checkout@v4
-     - name: sayinghellowworld
+     - 
+       uses: actions/checkout@v4
+     - 
+       name: sayinghellowworld
        run: echo "hello, world" 
+     - 
+       name: sayinghellowworld2
+       run: echo "hello, world2"
+     - 
+       name: sayinghellowworld3
+       run: echo "hello, world3"
+     - 
+       name: sayinghellowworld4
+       run: echo "hello, world4"
       
+
